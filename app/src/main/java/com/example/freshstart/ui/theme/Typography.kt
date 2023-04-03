@@ -20,11 +20,12 @@ val Typography = androidx.compose.material.Typography(
     h1 = TextStyle(
         fontSize = 48.sp,
         lineHeight = 56.sp
-    ).defaultFont().bold(),
+    ).defaultFont().semiBold(),
     h2 = TextStyle(
         fontSize = 32.sp,
-        lineHeight = 36.sp
-    ).defaultFont().bold(),
+        lineHeight = 36.sp,
+        fontWeight = FontWeight.Bold
+    ).defaultFont(),
     h3 = TextStyle(
         fontSize = 28.sp,
         lineHeight = 33.sp
@@ -36,23 +37,25 @@ val Typography = androidx.compose.material.Typography(
     subtitle1 = TextStyle(
         fontSize = 16.sp,
         lineHeight = 24.sp
-    ).defaultFont().bold(),
+    ).defaultFont().light(),
     subtitle2 = TextStyle(
-        fontSize = 14.sp,
+        fontSize = 16.sp,
         lineHeight = 20.sp
     ).defaultFont().medium(),
     body1 = TextStyle(
+        color = Blue,
         fontSize = 16.sp,
         lineHeight = 24.sp
     ).defaultFont().regular(),
     body2 = TextStyle(
+        color = Blue,
         fontSize = 14.sp,
         lineHeight = 20.sp
     ).defaultFont().regular(),
     button = TextStyle(
         fontSize = 20.sp,
         lineHeight = 20.sp
-    ).defaultFont().medium(),
+    ).defaultFont().semiBold(),
     caption = TextStyle(
         fontSize = 12.sp,
         lineHeight = 16.sp
@@ -69,6 +72,14 @@ fun TextStyle.bold(): TextStyle {
         fontStyle = FontStyle.Normal
     )
 }
+
+fun TextStyle.light(): TextStyle {
+    return this.copy(
+        fontWeight = FontWeight.Light,
+        fontStyle = FontStyle.Normal
+    )
+}
+
 
 fun TextStyle.semiBold(): TextStyle {
     return this.copy(

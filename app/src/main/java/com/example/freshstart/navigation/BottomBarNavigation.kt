@@ -13,7 +13,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.freshstart.ui.theme.Green
-import com.example.freshstart.ui.theme.Green30
+import com.example.freshstart.ui.theme.Disabled
 
 data class BottomNavigationItem(val icon: Int, val isSelected: Boolean, val onClick: () -> Unit)
 
@@ -58,7 +58,7 @@ private fun RowScope.BottomBarNavigationLayout(
             )
         },
         selectedContentColor = Green,
-        unselectedContentColor = Green30,
+        unselectedContentColor = Disabled,
         selected = isSelected,
         onClick = onClick
     )

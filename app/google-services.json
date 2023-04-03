@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "609135208307",
+    "project_id": "freshstart-5c325",
+    "storage_bucket": "freshstart-5c325.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:609135208307:android:f7d3da3a2960bb2cf80706",
+        "android_client_info": {
+          "package_name": "com.example.freshstart"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "609135208307-vfkammsbfi92f5th1or9kfphf28didha.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAXALz4NvpU58mGqq-IcL2wSlsMkpkFFPU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "609135208307-vfkammsbfi92f5th1or9kfphf28didha.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

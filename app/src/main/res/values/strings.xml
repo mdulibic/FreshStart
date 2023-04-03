@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">FreshStart</string>
+    <string name="welcome_title">Welcome to Fresh Start</string>
+    <string name="welcome_subtitle"> Track your habits and goals. Connect with
+    people in a safe and discreet environment.</string>
+    <string name="join_now">Join now</string>
+    <string name="login">Login</string>
+    <string name="already_part_of_the_community">Already part of the community?</string>
+    <string name="hello_again">Hello again!</string>
+    <string name="welcome_back">Welcome back,\n you’ve been missed!</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="email">E-mail</string>
+    <string name="login_fail">Invalid email or password</string>
 </resources>

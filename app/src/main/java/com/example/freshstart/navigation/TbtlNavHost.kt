@@ -33,14 +33,12 @@ fun NavGraphBuilder.navigation(
     startDestination: Destination,
     graphRoute: Destination,
     arguments: List<NamedNavArgument> = emptyList(),
-    deepLinks: List<NavDeepLink> = emptyList(),
     builder: NavGraphBuilder.() -> Unit
 ) {
     navigation(
         startDestination = startDestination.fullRoute,
         route = graphRoute.fullRoute,
         arguments = arguments,
-        deepLinks = deepLinks,
         builder = builder
     )
 }
@@ -48,13 +46,11 @@ fun NavGraphBuilder.navigation(
 fun NavGraphBuilder.composable(
     destination: Destination,
     arguments: List<NamedNavArgument> = emptyList(),
-    deepLinks: List<NavDeepLink> = emptyList(),
     content: @Composable (NavBackStackEntry) -> Unit
 ) {
     composable(
         route = destination.fullRoute,
         arguments = arguments,
-        deepLinks = deepLinks,
         content = content
     )
 }
