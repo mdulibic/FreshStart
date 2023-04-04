@@ -52,16 +52,16 @@ fun BasicInfoRegistrationLayout(
         modifier = Modifier.fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
+        Row(modifier = Modifier.fillMaxWidth().padding(16.dp)) {
+            for (i in 0..2) {
+                Spacer(modifier = Modifier.width(8.dp))
+                Step(modifier = Modifier.weight(1f), isActive = i == 0)
+            }
+        }
         Column(
             modifier = Modifier.verticalScroll(rememberScrollState()).weight(1f),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            Row(modifier = Modifier.fillMaxWidth().padding(16.dp)) {
-                for (i in 0..2) {
-                    Spacer(modifier = Modifier.width(8.dp))
-                    Step(modifier = Modifier.weight(1f), isActive = i == 0)
-                }
-            }
             Image(
                 modifier = Modifier.size(256.dp).padding(vertical = 16.dp),
                 painter = painterResource(id = R.drawable.lumiere_laptop_with_presentation_and_an_open_book),

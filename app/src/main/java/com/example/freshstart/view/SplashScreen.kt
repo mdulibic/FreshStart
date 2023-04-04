@@ -28,13 +28,7 @@ fun SplashLayout(
 
 ) {
     Column(modifier = Modifier.fillMaxSize().background(color = Green)) {
-        Text(
-            text = stringResource(R.string.app_name),
-            modifier = Modifier.padding(horizontal = 40.dp),
-            color = MaterialTheme.colors.onPrimary,
-            style = MaterialTheme.typography.h3,
-            textAlign = TextAlign.Center
-        )
+
     }
 }
 

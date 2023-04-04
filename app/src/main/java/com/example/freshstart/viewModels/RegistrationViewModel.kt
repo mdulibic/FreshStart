@@ -97,7 +97,7 @@ class RegistrationViewModel @Inject constructor(
 
     private fun onProceedToTagsStep() {
         viewModelScope.launch {
-            appNavigator.navigateTo(NoArgsDestination.AboutRegistrationScreen())
+            appNavigator.navigateTo(NoArgsDestination.ChooseTagsRegistrationScreen())
         }
     }
 
