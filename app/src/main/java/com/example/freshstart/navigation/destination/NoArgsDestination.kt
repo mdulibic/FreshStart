@@ -8,4 +8,12 @@ sealed class NoArgsDestination(route: String) : Destination(route) {
     object WelcomeScreen : NoArgsDestination("WelcomeScreen")
 
     object LoginScreen : NoArgsDestination("LoginScreen")
+
+    object BasicInfoRegistrationScreen : NoArgsDestination("BasicInfoRegistrationScreen")
+
+    object ChooseTagsRegistrationScreen : NoArgsDestination("ChooseTagsRegistrationScreen")
+
+    object AboutRegistrationScreen : NoArgsDestination("AboutRegistrationScreen")
+
+    object HomeScreen : NoArgsDestination("HomeScreen")
 }

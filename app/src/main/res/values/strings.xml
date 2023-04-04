@@ -7,9 +7,19 @@
     <string name="login">Login</string>
     <string name="already_part_of_the_community">Already part of the community?</string>
     <string name="hello_again">Hello again!</string>
+    <string name="basic_information">Basic information</string>
+    <string name="why_are_you_here">Why are you here?</string>
     <string name="welcome_back">Welcome back,\n you’ve been missed!</string>
     <string name="username">Username</string>
     <string name="password">Password</string>
+    <string name="repeat_password">Repeat password</string>
     <string name="email">E-mail</string>
     <string name="login_fail">Invalid email or password</string>
+    <string name="registration_fail">Failed to register. Check your username/email or network connection.</string>
+    <string name="proceed">Proceed</string>
+    <string name="start_journey">Start journey</string>
+    <string name="short_description">Short description</string>
+    <string name="about_description_placeholder">Tell us a little about yourself - your passions, your quirks, your dreams.</string>
+    <string name="tells_something_about_yourself">Tells us something about yourself</string>
+    <string name="choose_topics">Choose some topics that describe your goals and areas of interest.</string>
 </resources>

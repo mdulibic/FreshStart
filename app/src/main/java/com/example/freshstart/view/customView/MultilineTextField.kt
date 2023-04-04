@@ -3,6 +3,7 @@ package com.example.freshstart.view.customView
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
@@ -13,18 +14,15 @@ import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.input.KeyboardType
-import androidx.compose.ui.text.input.PasswordVisualTransformation
-import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.freshstart.R
 import com.example.freshstart.ui.theme.BackgroundInput
 import com.example.freshstart.ui.theme.Blue
-import com.example.freshstart.ui.theme.Green
 import com.example.freshstart.ui.theme.White
 
 @Composable
-fun CustomTextField(
+fun MultilineTextField(
     modifier: Modifier = Modifier,
     label: Int,
     value: String,
@@ -33,13 +31,10 @@ fun CustomTextField(
         backgroundColor = BackgroundInput,
         placeholderColor = White,
         textColor = Blue,
-        focusedIndicatorColor = Green,
+        focusedIndicatorColor = BackgroundInput,
         unfocusedIndicatorColor = BackgroundInput
     ),
     placeholder: @Composable (() -> Unit)? = null,
-    leadingIcon: @Composable (() -> Unit)? = null,
-    trailingIcon: @Composable (() -> Unit)? = null,
-    isPassword: Boolean = false,
     textStyle: TextStyle = MaterialTheme.typography.subtitle1
 ) {
     val focusManager = LocalFocusManager.current
@@ -52,17 +47,14 @@ fun CustomTextField(
         )
         TextField(
             modifier = Modifier
-                .fillMaxWidth().background(BackgroundInput, MaterialTheme.shapes.small),
+                .fillMaxWidth().background(BackgroundInput, MaterialTheme.shapes.small)
+                .height(120.dp),
             value = value,
-            visualTransformation = if (isPassword) PasswordVisualTransformation() else VisualTransformation.None,
             onValueChange = onChange,
             placeholder = placeholder,
-            leadingIcon = leadingIcon,
-            trailingIcon = trailingIcon,
-            maxLines = 1,
+            maxLines = 4,
             colors = colors,
             textStyle = textStyle,
-            singleLine = true,
             keyboardActions = KeyboardActions(onDone = { focusManager.clearFocus() }),
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Text)
         )
@@ -72,12 +64,11 @@ fun CustomTextField(
 @Preview
 @Composable
 private fun CustomTextFieldPreview() {
-    CustomTextField(
+    MultilineTextField(
         value = "John Doe",
         label = R.string.username,
         onChange = {},
         textStyle = MaterialTheme.typography.subtitle1,
         placeholder = {},
-        isPassword = false
     )
 }

@@ -19,10 +19,12 @@ import com.example.freshstart.navigation.destination.NoArgsDestination
 import com.example.freshstart.ui.theme.FreshStartTheme
 import com.example.freshstart.view.SplashScreen
 import com.example.freshstart.view.WelcomeScreen
-import com.example.freshstart.view.loginRegistration.LoginScreen
-import com.example.freshstart.viewModels.LoginViewModel
-import com.example.freshstart.viewModels.SplashViewModel
-import com.example.freshstart.viewModels.WelcomeViewModel
+import com.example.freshstart.view.home.HomeScreen
+import com.example.freshstart.view.login.LoginScreen
+import com.example.freshstart.view.registration.AboutRegistrationScreen
+import com.example.freshstart.view.registration.BasicInfoRegistrationScreen
+import com.example.freshstart.view.registration.ChooseTagsRegistrationScreen
+import com.example.freshstart.viewModels.*
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
@@ -64,6 +66,22 @@ class MainActivity : ComponentActivity() {
                             composable(destination = NoArgsDestination.LoginScreen) {
                                 val viewModel: LoginViewModel = hiltViewModel()
                                 LoginScreen(loginViewModel = viewModel)
+                            }
+                            composable(destination = NoArgsDestination.BasicInfoRegistrationScreen) {
+                                val viewModel: RegistrationViewModel = hiltViewModel()
+                                BasicInfoRegistrationScreen(registrationViewModel = viewModel)
+                            }
+                            composable(destination = NoArgsDestination.ChooseTagsRegistrationScreen) {
+                                val viewModel: RegistrationViewModel = hiltViewModel()
+                                ChooseTagsRegistrationScreen(registrationViewModel = viewModel)
+                            }
+                            composable(destination = NoArgsDestination.AboutRegistrationScreen) {
+                                val viewModel: RegistrationViewModel = hiltViewModel()
+                                AboutRegistrationScreen(registrationViewModel = viewModel)
+                            }
+                            composable(destination = NoArgsDestination.HomeScreen) {
+                                val viewModel: HomeViewModel = hiltViewModel()
+                                HomeScreen(homeViewModel = viewModel)
                             }
                         }
                     }

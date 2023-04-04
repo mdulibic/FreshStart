@@ -1,6 +1,5 @@
 package com.example.freshstart.viewModels
 
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.freshstart.navigation.IAppNavigator
 import com.example.freshstart.navigation.destination.NoArgsDestination
@@ -11,7 +10,7 @@ import javax.inject.Inject
 @HiltViewModel
 class SplashViewModel @Inject constructor(
     private val appNavigator: IAppNavigator
-): ViewModel() {
+): BaseViewModel() {
 
     init {
         navigateToWelcomeScreen()

@@ -8,3 +8,7 @@ fun String.isValidEmail(): Boolean {
 fun String.hasValidPasswordLength(): Boolean {
     return this.length >= 8
 }
+
+fun String.isSameAs(other: String): Boolean {
+    return this == other
+}

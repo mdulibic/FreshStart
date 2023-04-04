@@ -1,4 +1,4 @@
-package com.example.freshstart.view.loginRegistration
+package com.example.freshstart.view.login
 
 import android.app.Activity
 import androidx.compose.foundation.Image
